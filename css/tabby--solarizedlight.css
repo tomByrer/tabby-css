@@ -1,0 +1,71 @@
+/*! tabby--solarizedlight.css 0.1.0 (c)2014 tomByrer/tabby-css @license MIT */
+@charset "UTF-8";
+
+/*
+The Foundation
+*/
+body {
+	background: #839496;
+	color: #073642;
+}
+body::selection {
+	background: #268bd2;
+	color: #fdf6e3;
+}
+
+.tabby {
+}
+
+/* Hides checkboxes */
+/*.tabby label {
+	 Gives an inset look
+	border: 1px solid #222;
+	border-left-color: #555;
+}*/
+/*.tabby label:first-of-type {
+	border-top: 1px solid #666;
+}*/
+.tabby label span {
+	background: #eee8d5;
+	color: #586e75;
+	border-color: #fdf6e3;
+
+	transition: all 0.309s;
+
+}
+/*.tabby label span span {
+}
+.tabby ul li {
+	border-top: 1px solid #666;
+	border-right: 1px solid #222;
+	background: #404040;
+}
+*/
+.tabby ul li {
+	background: #fdf6e3;
+	color: #073642;
+}
+
+/* Links */
+.tabby ul li a {
+	color: #268bd2;
+}
+.tabby ul li a:hover,
+.tabby ul li a:focus {
+	text-decoration: none
+}
+
+/* menu selection */
+.tabby input:checked+label span {
+	position: relative;
+	top: 3px;
+	background: #fdf6e3;
+	color: #073642;
+	border-bottom: 4px solid #eee8d5;
+}
+.tabby input:not(:checked)+label:hover span {
+	position: relative;
+	top: 1px;
+	background: rgba(253,246,227,0.618);
+	border-bottom: 1px solid #eee8d5;
+}
