@@ -1,0 +1,123 @@
+/*! tabby-toptabs-.css 0.1.0 (c)2014 tomByrer/tabby-css @license MIT */
+@charset "UTF-8";
+
+/*
+Fonts
+*/
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300);
+
+/*
+The Foundation
+*/
+body {
+	margin-top: 1em
+}
+
+.tabby {
+	font: 300 0/1.5 "Roberto Slab", serif;
+
+	text-align: center
+}
+
+/* Hides checkboxes */
+.tabby label {
+	line-height: 40px;
+	font-size: 18px;
+	/* horizontal */
+	display: inline-block;
+	width: auto;
+	margin-right: 0;
+	text-align: left;
+}
+.tabby label span {
+	border-radius: 16px 16px 0px 0px;
+	border-bottom: 0px solid transparent;
+	margin: 0 1px 0 1px;
+}
+
+.tabby label span span {
+	padding: 0 1em;
+}
+.tabby ul {
+	font-size: 17px; /* Apply font-size */
+	margin-top: 2px;
+	/* flip */
+	perspective: 2000px;
+	perspective-origin: 50% 50%;
+	/* vertical left
+	margin-left: 25%*/
+}
+.tabby ul li {
+	text-align: left;
+	/* flip */
+	transition: all 0.618s;
+	transform: translateY(30px); /* change for hoizontal, -% right */
+	transform-origin: 0 0;  /* 100% 0%; for vertical right */
+}
+
+/* Links */
+.tabby ul li a:active {
+	position: relative;
+	top: 1px
+}
+
+/*
+Grid System
+*/
+
+.tabby .grid-row {
+	margin-top: 1em;
+}
+
+/*
+Typography Set
+*/
+
+/* Headings */
+.tabby ul li h1,
+.tabby ul li h2,
+.tabby ul li h3 {
+	font-weight: 300;
+	line-height: 1.3;
+}
+.tabby ul li h1 {
+	font-size: 48px
+}
+.tabby ul li h2 {
+	font-size: 42px
+}
+.tabby ul li h3 {
+	font-size: 36px
+}
+
+/* Paragraphs */
+.tabby ul li p {
+	margin-bottom: 1em;
+	font-size: 1em
+}
+
+/* Citations - Always place at the end of a parapraph */
+.tabby ul li .cite {
+	text-align: right;
+	font-style: italic
+}
+.tabby ul li .cite:before {
+	content: "-";
+	margin-right: 5px
+}
+
+/* Icon Font - FontAwesome */
+.fa {
+	margin-right: 10px;
+	font-size: 1em
+	/* Icon will always be same size as text */
+}
+
+
+@media screen and (max-width: 799px) {
+	.tabby ul li { /* hoizontal left */
+		transform: rotateX(-90deg);
+		transform-origin: 50% 0%;
+	}
+}

@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+/*
+The Foundation
+*/
+
+body {
+	cursor: default; /* prevent text-curser between tabs */
+}
+
+.tabby * {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: 0 0;
+	box-sizing: border-box;
+	word-wrap: break-word;
+}
+.tabby {
+	position: relative;
+	width: 90%;
+	/* Modify width here */
+	margin: 0 auto
+}
+.tabby input {
+	display: none;
+}
+
+/* Hides checkboxes */
+.tabby label {
+	z-index: 1;
+	display: inline-block;
+	width: 25%;
+	width: auto;
+	cursor: pointer;
+}
+.tabby label span {
+	display: block;
+}
+.tabby label span span {
+	padding: 0 1em;
+	background: 0 0;
+}
+.tabby input:checked+label {
+	cursor: default;
+}
+
+.tabby ul {
+	z-index: 2;
+	list-style: none;
+	position: relative;
+	display: block;
+}
+.tabby ul li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: auto;
+	padding: 1em 1.5em;
+	box-sizing: border-box;
+	opacity: 0;
+	/* Make text selectable */
+	user-select: text;
+}
+
+/*
+Grid System
+*/
+
+/* Clearfix */
+.tabby .grid-row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.tabby .grid-row:first-child {
+	margin-top: 0
+}
+.tabby .grid-column {
+	display: block;
+	float: left;
+	width: 100%;
+	margin-left: 2%;
+}
+.tabby .grid-col:first-child {
+	margin-left: 0;
+}
+
+/* Use these classes with .grid-col - must add up to 9  */
+.tabby .grid-1 {
+	width: 10%
+}
+.tabby .grid-2 {
+	width: 20%
+}
+.tabby .grid-3 {
+	width: 30%
+}
+.tabby .grid-4 {
+	width: 40%
+}
+.tabby .grid-5 {
+	width: 50%
+}
+.tabby .grid-6 {
+	width: 60%
+}
+.tabby .grid-7 {
+	width: 70%
+}
+.tabby .grid-8 {
+	width: 80%
+}
+.tabby .grid-9 {
+	width: 90%
+}
+.tabby .grid-10 {
+	width: 100%
+}
+
+/*
+Animations
+*/
+
+.tabby>.content1:checked~ul>.content1,
+.tabby>.content2:checked~ul>.content2,
+.tabby>.content3:checked~ul>.content3,
+.tabby>.content4:checked~ul>.content4
+{ /* Used for animations; add more as needed */
+	position: relative;
+	z-index: 1;
+	opacity: 1;
+	/* Default - fade effect */
+	transform: none
+}

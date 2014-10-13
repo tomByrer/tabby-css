@@ -1,0 +1,135 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>tabby.css-Tabby - CSS3 Tabbed Content - CodePen</title>
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/tabby.css">
+<link rel="stylesheet" href="css/tabby-box-.css">
+<link rel="stylesheet" title="makeup-gray" href="css/tabby--gray.css">
+<link rel="alternate stylesheet" title="makeup-solarizedlight" href="css/tabby--solarizedlight.css">
+<link rel="stylesheet" href="css/tabby799px.css">
+<script src="js/prefixfree.min.js"></script>
+
+</head>
+<body>
+
+<div class="tabby center">
+	<!--Tab 1-->
+	<input type="radio" name="tabby" checked="" id="tab1" class="content1">		<!--Checked= Tab shown-->
+	<label for="tab1">
+		<span><span><em class="fa fa-mail-forward"></em>Intro to tabby.css</span></span>
+	</label>
+	<!--Tab 2-->
+	<input type="radio" name="tabby" id="tab2" class="content2">
+	<label for="tab2">
+		<span><span><em class="fa fa-archive"></em>Usage</span></span>
+	</label>
+	<!--Tab 3-->
+	<input type="radio" name="tabby" id="tab3" class="content3">
+	<label for="tab3">
+		<span><span><em class="fa fa-question"></em>Can I use it?</span></span>
+	</label>
+	<!--Tab 4-->
+	<input type="radio" name="tabby" id="tab4" class="content4">
+	<label for="tab4">
+		<span><span><em class="fa fa-book"></em>Lorem Ipsum</span></span>
+	</label>
+
+	<!--Content-->
+	<ul id="tabby-content">
+		<!--Tab 1-->
+		<li class="content1">
+			<div>
+				<h1>What is tabby-css?</h1>
+				<p>tabby-css is a fork of <a href="http://jasonshi.gweb.io/truetabs.htm">Jason Shi's TrueTabs</a> CSS3 tabbed content switcher.
+					<a href="http://codepen.io/JustAnotherCoder/pen/gIqtp">Jason's CodePen</a> is excelent, but I wanted to make the CSS more modular.
+					So I seperated the basic functionality, and moved design flourishes into seperate CSS files.
+					I also removed the need to change classes to change design; design changes happen in the CSS.
+					The basic functionality is provided by <code>tabby.css</code>,
+					base layout design, fonts and main animations are provided by <code>tabby-{LAYOUT}-.css</code>,
+					and color skinning and flouishes ('makeup') are in a seperate CSS file named as <code>tabby--{MAKEUP}.css</code>.
+					To demostrate, try clicking around down here:
+				<div style="float:left">Switch makeup:&nbsp;</div>
+					<form id="switchform">
+						<select name="switchcontrol" size="1" style="background:rgba(0,0,0,0.154)" onChange="switch_style(this.options[this.selectedIndex].value)">
+							<option value="makeup-gray" selected="selected">tabby--gray.css</option>
+							<option value="makeup-solarizedlight">tabby--solarizedlight.css &nbsp;</option>
+						</select>
+					</form>
+				</p>
+				<p>Layout with the tabbed-menu on top <a href="index-toptabs.htm">tabby-toptabs-.css</a>.</p>
+				<p>Still a pre v1.0.0, so expect some structure changes and many improvements.
+					PRs are cool; check out my `.todo.md` where I'm headed.
+					New skins welcome, but good chance my "API" (classes, file structure, selectors) will change.</p>
+				<p>Thanks!</p>
+			</div>
+		</li>
+		<!--Tab 2-->
+		<li class="content2">
+			<div>
+				<h2>Configuration</h2>
+				<p>The CSS is split into several files, for a more modular configuration.
+					It is assumed the deployed website will do one of these:
+					<ul>
+						<li>Concate all css into one file before deployment, either by and or via build tool like <a href="https://github.com/mariocasciaro/gulp-concat-css">Gulp</a></li>
+						<li>Concate all css after deployment, using <a href="https://github.com/jsdelivr/jsdelivr#load-multiple-files-with-single-http-request">jsDelivr CDN</a> or a server-side solution.</li>
+						<li>Link to each individual CSS file (not recomended outside of development)</li>
+					</ul>
+				</p>
+			<p>
+				It has many color schemes, as well as animations on tab changes. It also has typography settings, a grid system, and, best of all, is completely responsive. It also has nice browser support, with support for IE9+, Chrome, Firefox, Opera, and Safari. The code is pretty commented and you should be able to find and edit stuff with no problems. I am planning on improving on this even further, so it will only get better from here
+				</p>
+			</div>
+		</li>
+		<!--Tab 3-->
+		<li class="content3">
+			<div>
+				<h3>Sure!</h3>
+				<p>tabby.css's mother source, <a href="http://jasonshi.gweb.io/truetabs.htm">TrueTabs</a>, was released as MIT, so shall I.</p>
+				<h3>MIT License</h3>
+				<p>tabby.css (c)2014 Tom Byrer, based on TrueTabs (c) 2014 Jason Shi</p>
+				<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+				<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+				<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+			</div>
+		</li>
+		<!--Tab 4-->
+		<li class="content4">
+			<div>
+		<div class="grid-row">
+		<div class="grid-column grid-5">
+				<h3>Lorem Ipsum filler</h3>
+				<p>
+				 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+				</p>
+		</div>
+		<div class="grid-column grid-4">
+				<h3>Another Example</h3>
+				<p>
+					Integer laoreet ex quis orci sollicitudin auctor. Nullam fermentum finibus magna non consequat. Pellentesque rhoncus sem eros, id eleifend tortor luctus sed. Sed ex nunc, ultricies non lacus nec, dictum semper urna. Fusce sit amet felis leo. Donec accumsan sollicitudin erat, at scelerisque risus blandit nec. Maecenas augue lorem, elementum cursus interdum at, varius vel ipsum. Pellentesque vestibulum, elit pellentesque consectetur consectetur, purus arcu vehicula arcu, eu hendrerit ipsum tellus sit amet turpis. Morbi sit amet neque ut libero ornare semper. Sed lacinia velit eros, in tempor lectus elementum in. Integer sollicitudin, leo ut hendrerit rutrum, orci augue posuere enim, quis posuere ipsum magna quis felis. Praesent pulvinar eget purus at auctor. Aenean ultrices nunc sed velit egestas, eu egestas tortor pharetra.
+				</p>
+		</div>
+		</div>
+
+				<div class="grid-row">
+		<div class="grid-column grid-3">
+				<h3>And Some More</h3>
+				<p>
+				 Vivamus malesuada ac turpis nec lobortis. Mauris pharetra, massa id sollicitudin facilisis, mi mi tincidunt mi, ornare laoreet lectus orci non lorem. Pellentesque ut mollis nisl. Nullam et bibendum tortor. Phasellus elementum at ligula sed pellentesque. Sed at vehicula est. Vivamus non scelerisque nunc.
+				</p>
+		</div>
+		<div class="grid-column grid-6">
+				<h3>Too much ipsum</h3>
+				<p>
+					Duis volutpat ornare sapien, nec dignissim lectus gravida in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc justo lacus, sagittis ac mi vitae, efficitur malesuada urna. Nunc suscipit arcu vel arcu viverra porta. Etiam cursus mi vitae pellentesque sodales. Ut tellus nisi, auctor eget semper eu, commodo id leo. Donec eget leo eget lacus consequat egestas.
+				</p>
+		</div>
+		</div>
+				<div class="cite">
+					<a href="http://www.lipsum.com/">Generate Your Own - lipsum.com</a>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<script src="js/switch-stylesheet.js" type="text/javascript"></script></p>
+</body></html>
